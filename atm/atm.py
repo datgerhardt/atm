@@ -15,9 +15,12 @@ class ATM:
         amt = self.amt
         for i in self.list_denominations:
             # print(i, self.list_denominations)
-            assert i != 0, ZeroDivisionError  # "Zero Division Error"
-            num = amt // i
-            rem = amt - num * i
+            # assert i != 0, ZeroDivisionError  # "Zero Division Error"
+            try:
+                num = amt // i
+                rem = amt - num * i
+            except ZeroDivisionError:
+                print(f'Denomination {i} is zero')
 
             if rem == 0:
                 self.denominations[str(i)] = num
