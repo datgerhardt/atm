@@ -19,9 +19,9 @@ class TestATM(unittest.TestCase):
         with self.assertRaises(TypeError):
             atm = ATM([1, '2', 5])
 
-    def test_denominations_with_zero(self):
-        with self.assertRaises(ZeroDivisionError):
-            atm = ATM([0])
+    # def test_denominations_with_zero(self):
+    #     with self.assertRaises(ZeroDivisionError):
+    #         atm = ATM([0])
 
 
 if __name__ == "__main__":

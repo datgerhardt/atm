@@ -38,9 +38,9 @@ class ATM:
         return self.depense()
 
 
-denominations = {}
-list_denominations = [1, 2, 5]
-amt = 111
+# denominations = {}
+# list_denominations = [1, 2, 5]
+# amt = 111
 
-atm = ATM(list_denominations=list_denominations, amt=amt)
-print("Class Base: ", atm.depense())
+# atm = ATM(list_denominations=list_denominations, amt=amt)
+# print("Class Base: ", atm.depense())
