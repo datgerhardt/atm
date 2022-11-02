@@ -7,7 +7,9 @@ class ATM:
         self.list_denominations = list_denominations
         # The sort the list in the desc. order
         self.list_denominations.sort(reverse=True)
+        assert amt >= 0, "Amount can not negative number"
         self.amt = amt
+
         # key is string denomination and value is the number of each denomination notes
         self.denominations = {}
 
@@ -36,6 +38,11 @@ class ATM:
         for i in amtDict.keys():
             self.amt += amtDict[i] * int(i)
         return self.depense()
+
+    @staticmethod
+    def present(dict: Dict[str, int]):
+        for i in dict.keys():
+            print(f'{dict[i]} note(s) of GHS {i} ')
 
 
 # denominations = {}
